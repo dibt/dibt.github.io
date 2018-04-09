@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BentengDi&#39;Blog</title>
+    <link>http://yoursite.com/</link>
+    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>群处守嘴，独处守心。修己以清心为要，涉世以慎言为先。</description>
+    <pubDate>Mon, 09 Apr 2018 09:40:29 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Myw</title>
+      <link>http://yoursite.com/2018/04/09/Myw/</link>
+      <guid>http://yoursite.com/2018/04/09/Myw/</guid>
+      <pubDate>Mon, 09 Apr 2018 09:40:29 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://yoursite.com/2018/04/09/Myw/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>My</title>
+      <link>http://yoursite.com/2018/04/09/My/</link>
+      <guid>http://yoursite.com/2018/04/09/My/</guid>
+      <pubDate>Mon, 09 Apr 2018 09:39:32 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://yoursite.com/2018/04/09/My/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>MyBlog</title>
+      <link>http://yoursite.com/2018/04/09/MyBlog/</link>
+      <guid>http://yoursite.com/2018/04/09/MyBlog/</guid>
+      <pubDate>Mon, 09 Apr 2018 09:37:27 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://yoursite.com/2018/04/09/MyBlog/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://yoursite.com/2018/04/09/test/</link>
+      <guid>http://yoursite.com/2018/04/09/test/</guid>
+      <pubDate>Mon, 09 Apr 2018 06:53:06 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://yoursite.com/2018/04/09/test/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>My First Blog</title>
+      <link>http://yoursite.com/2018/04/05/My-First-Blog/</link>
+      <guid>http://yoursite.com/2018/04/05/My-First-Blog/</guid>
+      <pubDate>Thu, 05 Apr 2018 05:58:52 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://yoursite.com/2018/04/05/My-First-Blog/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>
