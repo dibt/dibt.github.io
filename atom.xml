@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BentengDi&#39;Blog</title>
+  
+  <subtitle>Mr.Di</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://dibt.github.io/"/>
+  <updated>2018-04-14T04:04:21.129Z</updated>
+  <id>https://dibt.github.io/</id>
+  
+  <author>
+    <name>Mr.Di</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo的next主题优化</title>
+    <link href="https://dibt.github.io/2018/04/05/My-First-Blog/"/>
+    <id>https://dibt.github.io/2018/04/05/My-First-Blog/</id>
+    <published>2018-04-05T05:58:52.000Z</published>
+    <updated>2018-04-14T04:04:21.129Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-在右上角或者左上角实现fork-me-on-github"><a href="#1-在右上角或者左上角实现fork-me-on-github" class="headerlink" title="1.在右上角或者左上角实现fork me on github"></a>1.在右上角或者左上角实现fork me on github</h1><p><br><strong> 实现效果图：</strong><img src="./1.png" alt=""><br><strong>实现效果图：</strong><img src="./1.png" alt=""></p><p><strong>具体实现方法</strong><br>点击<a href="https://blog.github.com/2008-12-19-github-ribbons/" target="_blank" rel="noopener">这里</a>挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：</p><p><img src="./2.png" alt=""><br>然后粘贴刚才复制的代码到themes/next/layout/_layout.swig文件中(放在&lt;div class=”headband”&gt;&lt;/div&gt;的下面)，并把href改为你的github地址。</p><hr><h1 id="2-修改博客背景图片"><a href="#2-修改博客背景图片" class="headerlink" title="2.修改博客背景图片"></a>2.修改博客背景图片</h1><p><br>将背景图片放到 hexo工程文件-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下,<br>然后 hexo工程文件-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom 找到路径下的custom.styl文件<br>在文件的最上方加如下代码 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123; </span><br><span class="line">background-image: url(/images/background.jpg);  //back.jpg为背景图片</span><br><span class="line">background-attachment: fixed;  //不随屏幕滚动而滚动</span><br><span class="line">background-repeat: no-repeat;  // 如果背景图片不够屏幕大小则重复铺</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h1 id="3-next主题优化主要有以下选项"><a href="#3-next主题优化主要有以下选项" class="headerlink" title="3.next主题优化主要有以下选项"></a>3.next主题优化主要有以下选项</h1><p><br>添加RSS<br>添加动态背景<br>实现点击出现桃心效果<br>修改文章内链接文本样式<br>修改文章底部的那个带#号的标签<br>在每篇文章末尾统一添加“本文结束”标记<br>侧边栏社交小图标设置<br>在网站底部加上访问量<br>添加热度<br>网站底部字数统计<br>添加 README.md 文件<br>设置网站的图标Favicon<br>实现统计功能<br>添加顶部加载条<br>在文章底部增加版权信息<br>添加来必力<br>隐藏网页底部powered By Hexo / 强力驱动<br>修改网页底部的桃心<br>修改字体大小<br>修改打赏字体不闪动<br>侧边栏推荐阅读</p><hr><h1 id="4-最后贴几个官方的文档"><a href="#4-最后贴几个官方的文档" class="headerlink" title="4.最后贴几个官方的文档"></a>4.最后贴几个官方的文档</h1><p><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方使用文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next主题官方使用文档</a><br><a href="http://www.markdown.cn/#overview" target="_blank" rel="noopener">Markdown语法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-在右上角或者左上角实现fork-me-on-github&quot;&gt;&lt;a href=&quot;#1-在右上角或者左上角实现fork-me-on-github&quot; class=&quot;headerlink&quot; title=&quot;1.在右上角或者左上角实现fork me on github&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://dibt.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://dibt.github.io/tags/Hexo/"/>
+    
+      <category term="next" scheme="https://dibt.github.io/tags/next/"/>
+    
+  </entry>
+  
+</feed>

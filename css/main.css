@@ -1813,6 +1813,16 @@ pre .javascript .function {
 .rtl.post-title {
   font-family: UKIJ Ekran;
 }
+.post-body p a {
+  color: #00d;
+  border-bottom: none;
+  border-bottom: 1px solid #00d;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1977,7 +1987,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #40d5ff;
+  background: #ff7403;
 }
 .links-of-blogroll {
   font-size: 13px;
