@@ -114,8 +114,9 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构/j.jpg">
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构/k.jpg">
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构/l.jpg">
+<meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构/n.jpg">
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构/m.jpg">
-<meta property="og:updated_time" content="2018-04-19T12:47:09.197Z">
+<meta property="og:updated_time" content="2018-04-23T04:48:07.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构-B树">
 <meta name="twitter:description" content="1. B树1.1 定义B树是多路平衡查找树、自平衡树即“阶”定义为一个节点的子节点数目的最大值m阶B-树的定义:其中m&amp;gt;2，m的大小取决于磁盘页的大小1.非叶子节点的根节点至少有2个孩子2.每个非根和非叶子节点的节点至少有ceil(m/2)(ceil向上取整)个孩子，至多有M个孩子3.每个非根和非叶子节点的节点至少有ceil(m/2-1)个关键字，至多有m-1个关键字，且以升序排列,4.所有">
@@ -397,8 +398,8 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-19T20:47:09+08:00">
-                2018-04-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T12:48:07+08:00">
+                2018-04-23
               </time>
             
           </span>
@@ -458,7 +459,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,869 字
+                  3,204 字
                 </span>
               
 
@@ -474,7 +475,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  11 分钟
                 </span>
               
             </div>
@@ -512,6 +513,21 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <h1 id="2-B-树"><a href="#2-B-树" class="headerlink" title="2. B+树"></a>2. B+树</h1><h2 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h2><p>B+树是基于B-树的，增加了如下规则：<br>(1) 有k个子树的非终端结点包含有k个关键码（B树中是k-1个关键码），每个关键码不保存数据，只用来索引，所有数据都保存在叶子节点。</p>
 <p>(2) 所有的叶子结点中包含了全部关键码的信息，及指向含这些关键码记录的指针，且叶子结点本身按照关键字的大小自小而大顺序链接。</p>
 <p>(3) 所有的非终端结点可以看成是索引部分，结点中仅含有其子树根结点中最大（或最小）关键码。</p>
+<p>如图一棵3阶的B+树:<br><br><img src="./n.jpg" alt=""></p>
+<p>通常在B+树上有两个头指针，一个指向根节点，另一个指向关键字最小的叶子节点。因此可以对B+树进行两种查找运算：一种是从最小关键字起顺序查找，另一种是从根节点开始，进行随机查找。<br>在B+树上进行随机查找、插入和删除的过程基本上与B-树类似。只是在查找时，若非终端结点上的关键码等于给定值，并不终止，而是继续向下直到叶子结点。因此，在B+树，不管查找成功与否，每次查找都是走了一条从根到叶子结点的路径。</p>
+<h1 id="相关面试题"><a href="#相关面试题" class="headerlink" title="相关面试题"></a>相关面试题</h1><p>题目1： Mysql数据库用过吧？里面的索引是基于什么数据结构。</p>
+<p>答：主要是基于Hash表和B+树</p>
+<p>题目2： 很好请你说一下B+树的实现细节是什么样的？B-树和B+树有什么区别？联合索引在B+树中如何存储？</p>
+<p>答: 首先，数据库使用树型结构来增加查询效率，并保持有序。那么，为什么不使用二叉树来实现数据结构呢，二叉树算法时间复杂度是lg(N)，查询速度和比较次数都是较小的。</p>
+<p>实际上，查询索引操作最耗资源的不在内存中，而是磁盘IO。索引是存在磁盘上的，当数据量比较大的时候，索引的大小可能达到几个G。那么，我们利用索引进行查询的时候，不可能把索引直接加载到内存中，只能一次读取一个磁盘页，一个磁盘页对应着一个节点，一次读取操作时一个磁盘IO。在二叉树查询时，最坏的情况下查找的次数是树的高度，即IO次数为树的高度。B-树就是比二叉树“矮胖”的树。</p>
+<p>B-树查询的次数并不比二叉树的次数小，但是相比起磁盘IO速度，内存中的比较产生的耗时就不足为提了。所以只要树的高度足够低，IO次数少，就可以提升查找性能。而每个节点中有多个元素，都只在内存中操作。所以，B+树对比B-树有如下好处：</p>
+<p>IO次数少：B+树中间节点只存索引，不存在实际的数据，所以可以存储更多的数据。索引树更加的矮胖，IO次数更少。<br>性能稳定：B+树数据只存在于叶子节点，查询性能稳定<br>范围查询简单：B+树不需要中序遍历，遍历链表即可。</p>
+<h1 id="MyISAM索引"><a href="#MyISAM索引" class="headerlink" title="MyISAM索引"></a>MyISAM索引</h1><h5 id="主键索引"><a href="#主键索引" class="headerlink" title="主键索引"></a>主键索引</h5><p>MyISAM引擎使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。</p>
+<h5 id="辅助索引"><a href="#辅助索引" class="headerlink" title="辅助索引"></a>辅助索引</h5><p>在MyISAM中，主索引和辅助索引（Secondary key）在结构上没有任何区别，只是主索引要求key是唯一的，而辅助索引的key可以重复。<br>MyISAM中索引检索的算法为首先按照B+Tree搜索算法搜索索引，如果指定的Key存在，则取出其data域的值，然后以data域的值为地址，读取相应数据记录。MyISAM的索引方式也叫做“非聚集索引”。</p>
+<h1 id="InnoDB索引"><a href="#InnoDB索引" class="headerlink" title="InnoDB索引"></a>InnoDB索引</h1><h5 id="主键索引-1"><a href="#主键索引-1" class="headerlink" title="主键索引"></a>主键索引</h5><p>MyISAM索引文件和数据文件是分离的，索引文件仅保存数据记录的地址。而在InnoDB中，表数据文件本身就是按B+Tree组织的一个索引结构，这棵树的叶节点data域保存了完整的数据记录。这个索引的key是数据表的主键，因此InnoDB表数据文件本身就是主索引。InnoDB的索引方式也叫做“聚集索引”。</p>
+<h5 id="辅助索引-1"><a href="#辅助索引-1" class="headerlink" title="辅助索引"></a>辅助索引</h5><p>InnoDB的所有辅助索引都引用主键作为data域。<br>聚集索引这种实现方式使得按主键的搜索十分高效，但是辅助索引搜索需要检索两遍索引：首先检索辅助索引获得主键，然后用主键到主索引中检索获得记录。    不同存储引擎的索引实现方式对于正确使用和优化索引都非常有帮助，例如知道了InnoDB的索引实现后，就很容易明白为什么不建议使用过长的字段作为主键，因为所有辅助索引都引用主索引，过长的主索引会令辅助索引变得过大。再例如，用非单调的字段作为主键在InnoDB中不是个好主意，因为InnoDB数据文件本身是一颗B+Tree，非单调的主键会造成在插入新记录时数据文件为了维持B+Tree的特性而频繁的分裂调整，十分低效，而使用自增字段作为主键则是一个很好的选择。</p>
+<h5 id="InnoDB索引和MyISAM索引的区别："><a href="#InnoDB索引和MyISAM索引的区别：" class="headerlink" title="InnoDB索引和MyISAM索引的区别："></a>InnoDB索引和MyISAM索引的区别：</h5><p>一是主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。</p>
+<p>二是辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。</p>
 <p>思考答案：<br><br><img src="./m.jpg" alt=""></p>
 
       
@@ -815,7 +831,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-B树"><span class="nav-number">1.</span> <span class="nav-text">1. B树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-定义"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-B-树的查找"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 B-树的查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-B树的插入"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 B树的插入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-B树的删除"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 B树的删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-假若所删关键字所在结点并非最下层的非终端结点"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 假若所删关键字所在结点并非最下层的非终端结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-若该结点为最下层的非终端结点，且其中的关键字数目不少于ceil-m-2-，则删除完成，否则要进行“合并”结点的操作"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 若该结点为最下层的非终端结点，且其中的关键字数目不少于ceil(m/2)，则删除完成，否则要进行“合并”结点的操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-B-树"><span class="nav-number">2.</span> <span class="nav-text">2. B+树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-定义"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 定义</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-B树"><span class="nav-number">1.</span> <span class="nav-text">1. B树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-定义"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-B-树的查找"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 B-树的查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-B树的插入"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 B树的插入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-B树的删除"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 B树的删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-假若所删关键字所在结点并非最下层的非终端结点"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 假若所删关键字所在结点并非最下层的非终端结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-若该结点为最下层的非终端结点，且其中的关键字数目不少于ceil-m-2-，则删除完成，否则要进行“合并”结点的操作"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 若该结点为最下层的非终端结点，且其中的关键字数目不少于ceil(m/2)，则删除完成，否则要进行“合并”结点的操作</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-B-树"><span class="nav-number">2.</span> <span class="nav-text">2. B+树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-定义"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关面试题"><span class="nav-number">3.</span> <span class="nav-text">相关面试题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MyISAM索引"><span class="nav-number">4.</span> <span class="nav-text">MyISAM索引</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主键索引"><span class="nav-number">4.0.0.0.1.</span> <span class="nav-text">主键索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#辅助索引"><span class="nav-number">4.0.0.0.2.</span> <span class="nav-text">辅助索引</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#InnoDB索引"><span class="nav-number">5.</span> <span class="nav-text">InnoDB索引</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主键索引-1"><span class="nav-number">5.0.0.0.1.</span> <span class="nav-text">主键索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#辅助索引-1"><span class="nav-number">5.0.0.0.2.</span> <span class="nav-text">辅助索引</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#InnoDB索引和MyISAM索引的区别："><span class="nav-number">5.0.0.0.3.</span> <span class="nav-text">InnoDB索引和MyISAM索引的区别：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -849,7 +865,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
     
       <span class="post-meta-item-text">博客全站共</span>
     
-    <span title="博客全站共">2.3k 字</span>
+    <span title="博客全站共">3.6k 字</span>
   
 </div>
 <!-- 
