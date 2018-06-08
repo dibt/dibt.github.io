@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dibt.github.io/"/>
-  <updated>2018-06-06T10:27:38.494Z</updated>
+  <updated>2018-06-08T03:10:42.551Z</updated>
   <id>https://dibt.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="https://dibt.github.io/2018/06/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://dibt.github.io/2018/06/08/设计模式/</id>
+    <published>2018-06-08T02:19:51.000Z</published>
+    <updated>2018-06-08T03:10:42.551Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="java-设计模式"><a href="#java-设计模式" class="headerlink" title="java-设计模式"></a>java-设计模式</h1><hr><h3 id="单例模式-singleton"><a href="#单例模式-singleton" class="headerlink" title="单例模式-singleton"></a>单例模式-singleton</h3><p><a href="https://github.com/dibt/singleton" target="_blank" rel="noopener">高并发下线程安全的单例模式</a></p><hr><center><font color="#00dddd"><strong><em>文章持续更新</em></strong></font><br></center>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;java-设计模式&quot;&gt;&lt;a href=&quot;#java-设计模式&quot; class=&quot;headerlink&quot; title=&quot;java-设计模式&quot;&gt;&lt;/a&gt;java-设计模式&lt;/h1&gt;&lt;hr&gt;
+&lt;h3 id=&quot;单例模式-singleton&quot;&gt;&lt;a href=&quot;#单例模式-s
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://dibt.github.io/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://dibt.github.io/tags/java/"/>
+    
+      <category term="设计模式" scheme="https://dibt.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>好文推荐</title>
@@ -65,9 +93,9 @@
       <category term="算法" scheme="https://dibt.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="算法" scheme="https://dibt.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="数据结构" scheme="https://dibt.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="https://dibt.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -124,33 +152,6 @@
       <category term="数据结构" scheme="https://dibt.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="树" scheme="https://dibt.github.io/tags/%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo的next主题优化</title>
-    <link href="https://dibt.github.io/2018/04/05/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
-    <id>https://dibt.github.io/2018/04/05/hexo的next主题优化/</id>
-    <published>2018-04-05T05:58:52.000Z</published>
-    <updated>2018-05-24T03:08:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-在右上角或者左上角实现fork-me-on-github"><a href="#1-在右上角或者左上角实现fork-me-on-github" class="headerlink" title="1.在右上角或者左上角实现fork me on github"></a>1.在右上角或者左上角实现fork me on github</h1><p><br><strong> 实现效果图：</strong><img src="./1.png" alt=""><br><strong>实现效果图：</strong><img src="./1.png" alt=""></p><p><strong>具体实现方法</strong><br>点击<a href="https://blog.github.com/2008-12-19-github-ribbons/" target="_blank" rel="noopener">这里</a>挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：</p><p><img src="./2.png" alt=""><br>然后粘贴刚才复制的代码到themes/next/layout/_layout.swig文件中(放在&lt;div class=”headband”&gt;&lt;/div&gt;的下面)，并把href改为你的github地址。</p><hr><h1 id="2-修改博客背景图片"><a href="#2-修改博客背景图片" class="headerlink" title="2.修改博客背景图片"></a>2.修改博客背景图片</h1><p><br>将背景图片放到 hexo工程文件-&gt; themes -&gt; next -&gt; source -&gt; images 的路径下,<br>然后 hexo工程文件-&gt; themes -&gt; next -&gt; source -&gt; css -&gt; _custom 找到路径下的custom.styl文件<br>在文件的最上方加如下代码 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123; </span><br><span class="line">background-image: url(/images/background.jpg);  //back.jpg为背景图片</span><br><span class="line">background-attachment: fixed;  //不随屏幕滚动而滚动</span><br><span class="line">background-repeat: no-repeat;  // 如果背景图片不够屏幕大小则重复铺</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h1 id="3-next主题优化主要有以下选项"><a href="#3-next主题优化主要有以下选项" class="headerlink" title="3.next主题优化主要有以下选项"></a>3.next主题优化主要有以下选项</h1><p><br>添加RSS<br>添加动态背景<br>实现点击出现桃心效果<br>修改文章内链接文本样式<br>修改文章底部的那个带#号的标签<br>在每篇文章末尾统一添加“本文结束”标记<br>侧边栏社交小图标设置<br>在网站底部加上访问量<br>添加热度<br>网站底部字数统计<br>添加 README.md 文件<br>设置网站的图标Favicon<br>实现统计功能<br>添加顶部加载条<br>在文章底部增加版权信息<br>添加来必力<br>隐藏网页底部powered By Hexo / 强力驱动<br>修改网页底部的桃心<br>修改字体大小<br>修改打赏字体不闪动<br>侧边栏推荐阅读</p><hr><h1 id="4-最后贴几个官方的文档"><a href="#4-最后贴几个官方的文档" class="headerlink" title="4.最后贴几个官方的文档"></a>4.最后贴几个官方的文档</h1><p><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方使用文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">next主题官方使用文档</a><br><a href="http://www.markdown.cn/#overview" target="_blank" rel="noopener">Markdown语法</a><br><a href="https://fontawesome.com/icons?from=io" target="_blank" rel="noopener">图标地址</a></p><hr><h1 id="5-常用的hexo命令"><a href="#5-常用的hexo命令" class="headerlink" title="5.常用的hexo命令"></a>5.常用的hexo命令</h1><p>hexo new page ·· 添加分类<br>hexo new title ·· 添加文章<br>hexo clean<br>hexo generate<br>hexo deploy<br>hexo s<br>hexo g -d<br>搜索功能<br>hexo algolia  如果还是不生效的话就先hexo clean一下</p><center><font color="#00dddd"><strong><em>文章持续更新</em></strong></font><br></center><hr><!--这些是注释文本，不会显示<p align="left"><b><i>居左</i></b></p><center>***居中***</center><p align="right">***居右***</p><i>斜体</i><b>加粗</b><em>强调</em>-->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;1-在右上角或者左上角实现fork-me-on-github&quot;&gt;&lt;a href=&quot;#1-在右上角或者左上角实现fork-me-on-github&quot; class=&quot;headerlink&quot; title=&quot;1.在右上角或者左上角实现fork me on github&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://dibt.github.io/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://dibt.github.io/tags/Hexo/"/>
-    
-      <category term="next" scheme="https://dibt.github.io/tags/next/"/>
     
   </entry>
   
