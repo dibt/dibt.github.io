@@ -27,6 +27,21 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
   <link href="/lib/pace/pace-theme-loading-bar.min.css?v=1.0.2" rel="stylesheet">
 
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://dibt.github.io/");
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -116,7 +131,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构-B树/l.jpg">
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构-B树/n.jpg">
 <meta property="og:image" content="https://dibt.github.io/2018/04/17/数据结构-B树/m.jpg">
-<meta property="og:updated_time" content="2018-04-23T04:48:08.000Z">
+<meta property="og:updated_time" content="2019-07-22T15:37:47.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构-B树">
 <meta name="twitter:description" content="1. B树1.1 定义B树是多路平衡查找树、自平衡树即“阶”定义为一个节点的子节点数目的最大值m阶B-树的定义:其中m&amp;gt;2，m的大小取决于磁盘页的大小1.非叶子节点的根节点至少有2个孩子2.每个非根和非叶子节点的节点至少有ceil(m/2)(ceil向上取整)个孩子，至多有M个孩子3.每个非根和非叶子节点的节点至少有ceil(m/2-1)个关键字，至多有m-1个关键字，且以升序排列,4.所有">
@@ -398,8 +413,8 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T12:48:08+08:00">
-                2018-04-23
+              <time title="更新于" itemprop="dateModified" datetime="2019-07-22T23:37:47+08:00">
+                2019-07-22
               </time>
             
           </span>
