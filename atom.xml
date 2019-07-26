@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dibt.github.io/"/>
-  <updated>2019-07-26T14:04:17.887Z</updated>
+  <updated>2019-07-26T16:20:46.014Z</updated>
   <id>https://dibt.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://dibt.github.io/2019/07/26/%E7%AC%94%E8%AE%B0/"/>
     <id>https://dibt.github.io/2019/07/26/笔记/</id>
     <published>2019-07-26T13:59:46.000Z</published>
-    <updated>2019-07-26T14:04:17.887Z</updated>
+    <updated>2019-07-26T16:20:46.014Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>所有整型包装类对象之间值的比较，全部使用equals方法比较。<br>对于 Integer var = ? 在-128 至 127 范围内的赋值，Integer 对象是在 IntegerCache.cache 产 生，会复用已有对象，这个区间内的 Integer<br>值可以直接使用==进行判断，但是这个区间之外的所有数 据，都会在堆上产生，并不会复用已有对象，<strong>这是一个大坑</strong>，推荐使用 equals 方法进行判断。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Integer var1 = 22;</span><br><span class="line">Integer var2 = 22;</span><br><span class="line">var1 == var2 //true</span><br><span class="line">var1.equals(var2) //true</span><br><span class="line">Integer var3 = 222;</span><br><span class="line">Integer var4 = 222;</span><br><span class="line">var3 == var4 //false</span><br><span class="line">var3.equals(var4) //true</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li>所有整型包装类对象之间值的比较，全部使用equals方法比较。对于 Integer var = ? 在-128至127范围内的赋值，Integer 对象是在 IntegerCache.cache产<br>生，会复用已有对象，这个区间内的 Integer 值可以直x接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，<label style="color:green"><strong>这是一个大坑</strong></label>，推荐使用 equals 方法进行判断。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Integer var1 = 22;</span><br><span class="line">Integer var2 = 22;</span><br><span class="line">var1 == var2 //true</span><br><span class="line">var1.equals(var2) //true</span><br><span class="line">Integer var3 = 222;</span><br><span class="line">Integer var4 = 222;</span><br><span class="line">var3 == var4 //false</span><br><span class="line">var3.equals(var4) //true</span><br></pre></td></tr></table></figure></li></ol><label style="color:red">红色</label><br><label style="color:green">绿色</label><br><label style="color:yellow">黄色</label><br><label style="color:blue">蓝色</label>]]></content>
     
     <summary type="html">
     
       
       
         &lt;ol&gt;
-&lt;li&gt;所有整型包装类对象之间值的比较，全部使用equals方法比较。&lt;br&gt;对于 Integer var = ? 在-128 至 127 范围内的赋值，Integer 对象是在 IntegerCache.cache 产 生，会复用已有对象，这个区间内的 Integer
+&lt;li&gt;所有整型包装类对象之间值的比较，全部使用equals方法比较。对于 Integer var = ? 在-128至127范围内的赋值，Integer 对象是在 IntegerCache.cache产&lt;br&gt;生，会复用已有对象，这个区间内的 Integer 值可以直
       
     
     </summary>
