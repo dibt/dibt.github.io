@@ -116,7 +116,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <meta property="og:site_name" content="BentengDi&#39;Blog">
 <meta property="og:description" content="所有整型包装类对象之间值的比较，全部使用equals方法比较。对于 Integer var = ? 在-128至127范围内的赋值，Integer 对象是在 IntegerCache.cache产生，会复用已有对象，这个区间内的 Integer 值可以直x接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑，推荐使用 equals 方法进行判断。  1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-03T00:43:26.743Z">
+<meta property="og:updated_time" content="2019-08-03T00:49:41.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记">
 <meta name="twitter:description" content="所有整型包装类对象之间值的比较，全部使用equals方法比较。对于 Integer var = ? 在-128至127范围内的赋值，Integer 对象是在 IntegerCache.cache产生，会复用已有对象，这个区间内的 Integer 值可以直x接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑，推荐使用 equals 方法进行判断。  1">
@@ -397,7 +397,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-03T08:43:26+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-03T08:49:41+08:00">
                 2019-08-03
               </time>
             
@@ -458,7 +458,7 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,458 字
+                  1,479 字
                 </span>
               
 
@@ -499,29 +499,28 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <li><p>所有整型包装类对象之间值的比较，全部使用equals方法比较。对于 Integer var = ? 在-128至127范围内的赋值，Integer 对象是在 IntegerCache.cache产<br>生，会复用已有对象，这个区间内的 Integer 值可以直x接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，<label style="color:green"><strong>这是一个大坑</strong></label>，推荐使用 equals 方法进行判断。</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Integer var1 = 22;</span><br><span class="line">Integer var2 = 22;</span><br><span class="line">var1 == var2 //true</span><br><span class="line">var1.equals(var2) //true</span><br><span class="line">Integer var3 = 222;</span><br><span class="line">Integer var4 = 222;</span><br><span class="line">var3 == var4 //false</span><br><span class="line">var3.equals(var4) //true</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>本地打包成功,启动无报错,登录显示空白页面.发布到服务器正常<br>本地配置路径不对,服务器用的单独的配置文件<br>各种情况都已经考虑到了,都已经排查.但是没有考虑到是路径问题.不细心!!!!有的时候可能就是一个很小的问题导致的各种无厘头问题,但是自己往往会忽略掉这些不起眼的问题的存在  </p>
+<li><p>本地打包成功,启动无报错,登录显示空白页面.发布到服务器正常<br>本地配置路径不对,服务器用的单独的配置文件<br>各种情况都已经考虑到了,都已经排查.但是没有考虑到是路径问题.不细心!!!!有的时候可能就是一个很小的问题导致的各种无厘头问题,但是自己往往会忽略掉这些不起眼的问题的存在</p>
 </li>
-<li><p>注意mysql表字段类型为timestamp时(字段定义为not null并且没有默认值的时候)<br>系统会自动加 DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP属性  </p>
+<li><p>注意mysql表字段类型为timestamp时(字段定义为not null并且没有默认值的时候)系统会自动加 DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP属性</p>
 </li>
-<li><p>中航分支开发测试完成,大合版出现获取不到用户信息,其他页面正常获取用户信息,知道问题,不知道如何下手查找排查问题<br>云信那边修改了applicationContext-security.xml文件,把url加了白名单<br>考虑spring以及mvc的拦截器和过滤器的配置是否有改动.  </p>
+<li><p>中航分支开发测试完成,大合版出现获取不到用户信息,其他页面正常获取用户信息,知道问题,不知道如何下手查找排查问题,后来发现是云信那边修改了applicationContext-security.xml文件,把url加了白名单<br>考虑spring以及mvc的拦截器和过滤器的配置是否有改动.  </p>
 </li>
 <li><p>多台服务器免密登录,非root账户免密登录另外一台root账户的机器,解决不同用户名之间的问题<br>在.ssh/目录下新建config文件,指定Host和user,例如:  </p>
 <ul>
-<li>Host slave01  <ul>
-<li>HostName 192.168.0.A  </li>
-<li>User root  </li>
+<li>Host slave01<ul>
+<li>HostName 192.168.0.A</li>
+<li>User root</li>
 </ul>
 </li>
-<li><p>Host slave02  </p>
-<ul>
-<li>HostName 192.168.0.B  </li>
-<li>User root  </li>
+<li>Host slave02<ul>
+<li>HostName 192.168.0.B</li>
+<li>User root</li>
+</ul>
+</li>
 </ul>
 <p>在povosdi账户下直接ssh 192.168.0.A 相当于ssh <a href="mailto:root@192.168.0.A" target="_blank" rel="noopener">root@192.168.0.A</a>,如果不加config文件,相当于ssh <a href="mailto:povosdi@192.168.0.A" target="_blank" rel="noopener">povosdi@192.168.0.A</a>  </p>
 </li>
-</ul>
-</li>
-<li><p>NameNode启动成功,两个DataNode启动不了,Active Nodes数量显示为0,两个原因:  </p>
+<li><p>NameNode启动成功,两个DataNode启动不了,Active Nodes数量显示为0,两个原因:</p>
 <ul>
 <li>两个DataNode的core-site.xml中fs.defaultFS应该为master:9000,而不应该是各自的ip:port(slave01:9000)</li>
 <li>master的防火墙没有开放9000端口,导致DateNode一直连不上NameNode,暴力解决方法,直接关闭防火墙(不建议)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">    &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;hdfs://master:9000&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
@@ -550,27 +549,14 @@ color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 <li><p>走队列回调，生产者正常，消费者正常回调，往队列push消息一直push不进去，最终发现是队列配置异常。交换机配置不对。</p>
 </li>
 <li><p>数据库数据正常，其中有个String转BigDecimal的方法，类型转换catch异常，返回0。string类型转换最好trim一下。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">        public BigDecimal parseValue()&#123;</span><br><span class="line">          try&#123;</span><br><span class="line">            if(StringUtils.isBlank(this.value))&#123;</span><br><span class="line">              return BigDecimal.ZERO;</span><br><span class="line">            &#125;</span><br><span class="line">            BigDecimal valueBigDecimal = new BigDecimal(this.value);</span><br><span class="line">            return valueBigDecimal;</span><br><span class="line">          &#125;catch (Exception e) &#123;</span><br><span class="line">          return BigDecimal.ZERO;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ```  </span><br><span class="line">16. 考虑到线上数据库，mq等版本差异，语法会有差异</span><br><span class="line"></span><br><span class="line">17. 解决jar包版本问题，先查看项目jar包依赖</span><br></pre></td></tr></table></figure>
-<p>mvn dependency:tree</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">然后在这个jar包里排掉有问题的jar包，再重新引用一个合适版本的jar包就ok</span><br></pre></td></tr></table></figure>
-<p>   <dependency></dependency></p>
-<pre><code>  &lt;groupId&gt;com.zufangbao&lt;/groupId&gt;
-  &lt;artifactId&gt;coffer&lt;/artifactId&gt;
-  &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
-  &lt;exclusions&gt;
-    &lt;exclusion&gt;
-      &lt;groupId&gt;xerces&lt;/groupId&gt;
-      &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;
-    &lt;/exclusion&gt;
-  &lt;/exclusions&gt;
-&lt;/dependency&gt;
-&lt;!-- https://mvnrepository.com/artifact/xerces/xercesImpl --&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;xerces&lt;/groupId&gt;
-  &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;
-  &lt;version&gt;2.11.0&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre><p>  <br><code>`</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public BigDecimal parseValue()&#123;</span><br><span class="line">  try&#123;</span><br><span class="line">    if(StringUtils.isBlank(this.value))&#123;</span><br><span class="line">      return BigDecimal.ZERO;</span><br><span class="line">    &#125;</span><br><span class="line">    BigDecimal valueBigDecimal = new BigDecimal(this.value);</span><br><span class="line">    return valueBigDecimal;</span><br><span class="line">  &#125;catch (Exception e) &#123;</span><br><span class="line">  return BigDecimal.ZERO;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>考虑到线上数据库，mq等版本差异，语法会有差异</p>
+</li>
+<li><p>解决jar包版本问题，先查看项目jar包依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn dependency:tree</span><br></pre></td></tr></table></figure>
+<p>然后在这个jar包里排掉有问题的jar包，再重新引用一个合适版本的jar包就ok</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.zufangbao&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;coffer&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;</span><br><span class="line">    &lt;exclusions&gt;</span><br><span class="line">      &lt;exclusion&gt;</span><br><span class="line">        &lt;groupId&gt;xerces&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;</span><br><span class="line">      &lt;/exclusion&gt;</span><br><span class="line">    &lt;/exclusions&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line">  &lt;!-- https://mvnrepository.com/artifact/xerces/xercesImpl --&gt;</span><br><span class="line">  &lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;xerces&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.11.0&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改表字段名称的时候注意组合索引是否引用这个字段，否则该列会从组合索引中删除掉，引起组合索引失效或者各种各样的问题。</p>
 </li>
